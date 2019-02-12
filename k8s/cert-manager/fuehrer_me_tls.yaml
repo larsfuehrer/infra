@@ -15,7 +15,7 @@ spec:
           digitalocean:
             tokenSecretRef:
               name: digitalocean-dns
-              key: 49d52b0842c11f70ca13f5e861e7e51ae721aa9ca63537d29f822ae84ec3e710
+              key: <DO-API-TOKEN>
 ---
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
