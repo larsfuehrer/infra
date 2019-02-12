@@ -15,4 +15,4 @@ resourcesToWatch:
 
 slack:
   channel: '#kube-watch'
-  token: 'xoxb-501001582306-541120061574-F1QyzHyrrIVpGABgHmgTbzlV'
+  token: '<slack token>'
