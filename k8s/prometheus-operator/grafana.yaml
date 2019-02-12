@@ -1,5 +1,5 @@
 grafana:
-  adminPassword: "JtA4qe7uUW9NvDb"
+  adminPassword: "<PASSWORD>"
 
   ingress:
     enabled: true
