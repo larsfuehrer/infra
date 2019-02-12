@@ -1,0 +1,38 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Issuer
+metadata:
+  name: letsencrypt-production
+  namespace: cert-manager
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: lars.fuehrer+letsencrypt@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-production
+    dns01:
+      providers:
+        - name: digitalocean-dns
+          digitalocean:
+            tokenSecretRef:
+              name: digitalocean-dns
+              key: 49d52b0842c11f70ca13f5e861e7e51ae721aa9ca63537d29f822ae84ec3e710
+---
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: fuehrer-me
+  namespace: cert-manager
+spec:
+  secretName: fuehrer-me-tls
+  issuerRef:
+    name: letsencrypt-production
+  commonName: '*.fuehrer.me'
+  dnsNames:
+  - fuehrer.me
+  acme:
+    config:
+    - dns01:
+        provider: digitalocean-dns
+      domains:
+      - '*.fuehrer.me'
+      - fuehrer.me

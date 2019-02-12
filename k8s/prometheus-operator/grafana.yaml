@@ -1,0 +1,18 @@
+grafana:
+  adminPassword: "JtA4qe7uUW9NvDb"
+
+  ingress:
+    enabled: true
+    annotations: 
+      kubernetes.io/ingress.class: nginx
+      certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    hosts: 
+      - grafana.fuehrer.me
+    tls:
+      - secretName: letsencrypt-prod
+        hosts:
+          - grafana.fuehrer.me
+
+  auth:
+    anonymous:
+      enabled: "false"

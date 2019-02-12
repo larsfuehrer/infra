@@ -1,0 +1,19 @@
+functionNamespace: openfaas-fn
+
+exposeServices: false
+basic_auth: true
+
+ingress:
+  enabled: false
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: gateway.fuehrer.me
+      serviceName: gateway
+      servicePort: 8080
+      path: /
+  tls:
+    - secretName: letsencrypt-prod
+      hosts:
+        - gateway.fuehrer.me

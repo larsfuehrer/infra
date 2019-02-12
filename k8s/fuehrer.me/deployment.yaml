@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: fuehrer-me
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fuehrer-me
+    spec:
+      containers:
+        - name: fuehrer-me
+          image: quay.io/pierknueppel/fuehrer-me:1.0
+          ports:
+            - containerPort: 80

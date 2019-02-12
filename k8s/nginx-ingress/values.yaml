@@ -1,0 +1,15 @@
+## nginx configuration
+controller:
+  stats:
+    enabled: true
+
+  metrics:
+    enabled: false
+
+    serviceMonitor:
+      enabled: true
+      additionalLabels: {}
+
+  lifecycle: {}
+
+  priorityClassName: ""

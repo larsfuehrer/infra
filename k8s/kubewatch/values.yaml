@@ -1,0 +1,18 @@
+rbac:
+  create: true
+resourcesToWatch:
+  deployment: false
+  replicationcontroller: false
+  replicaset: false
+  daemonset: false
+  services: true
+  pod: true
+  job: true
+  persistentvolume: true
+  namespace: true
+  secret: false
+  ingress: true
+
+slack:
+  channel: '#kube-watch'
+  token: 'xoxb-501001582306-541120061574-F1QyzHyrrIVpGABgHmgTbzlV'

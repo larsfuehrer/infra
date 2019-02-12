@@ -1,0 +1,4 @@
+tf/*/*.tfstate
+tf/*/*.tfstate.backup
+tf/*/.terraform/
+.secrets/
