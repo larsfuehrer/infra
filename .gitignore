@@ -1,4 +1,4 @@
-tf/*/*.tfstate
-tf/*/*.tfstate.backup
-tf/*/.terraform/
+terraform/*/*.tfstate
+terraform/*/*.tfstate.backup
+terraform/*/.terraform/
 .secrets/
