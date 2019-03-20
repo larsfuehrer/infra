@@ -7,4 +7,4 @@ if [ -z "${KUBECONFIG}" ]; then
 fi
 
 # install prometheus-operator helm chart
-helm install stable/prometheus-operator --name prometheus-operator --namespace monitoring -f grafana.yaml
+helm install stable/prometheus-operator --name prometheus-operator --namespace monitoring -f values.yaml
